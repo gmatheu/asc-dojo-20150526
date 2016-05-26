@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "mocha": "*",
+    "should": "*"
+  },
+  "scripts": {
+    "test": "mocha",
+    "watch": "mocha --watch"
+  }
+}
