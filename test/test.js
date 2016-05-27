@@ -16,8 +16,23 @@ describe('FizzBuzz', function() {
       it('should return FIZZBUZZ', function() {
         fizzBuzz.process(15).should.eql("FIZZBUZZ");
       });
-      it('should fail with str', function() {
-        fizzBuzz.process("15").should.fail();
+      // it('should fail with str', function() {
+      //   fizzBuzz.process("15").should.fail();
+      // });
+    })
+
+    describe('#minesweeper', function() {
+      it('should empty when board is empty', function() {
+        fizzBuzz.minesweeper([]).should.eql([]);
+      });
+      it('should be 0', function() {
+        fizzBuzz.minesweeper([['.']]).should.eql([['0']]);
+      });
+      it('should be *', function() {
+        fizzBuzz.minesweeper([['*']]).should.eql([['*']]);
+      });
+      it('should be *', function() {
+        fizzBuzz.minesweeper([['*','.']]).should.eql([['*', '1']]);
       });
     })
 })
